@@ -1,4 +1,7 @@
 # START
-py manage.py migrate app zero
-py manage.py makemigrations app
-py manage.py migrate app
+`env/Scripts/activate`
+`py manage.py migrate app`
+`py manage.py seed`
+
+# END
+`py manage.py migrate app zero`
