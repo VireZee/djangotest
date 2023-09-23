@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Daftar Produk</title>
+    </head>
+    <body>
+        <h1>Daftar Produk yang Bisa Dijual</h1>
+        <ul>
+            {% for produk in produk_list %}
+                <li>{{ produk.nama_produk }} - Harga: {{ produk.harga }} - Kategori: {{ produk.kategori_id.nama_kategori }}</li>
+                <a href="{% url 'delete' produk.id_produk %}" onclick="return confirm('Apakah Anda yakin ingin menghapus produk ini?')">Hapus</a>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
